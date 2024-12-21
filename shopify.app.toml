@@ -3,7 +3,7 @@
 client_id = "a824abed5819efba3f1a6b4c7a4b496d"
 application_url = "https://metafields-importer.onrender.com"
 embedded = true
-name = "metafields-importer"
+name = "Metafields Import/Export Bulk"
 handle = "metafields-all-importer-export"
 
 [webhooks]
