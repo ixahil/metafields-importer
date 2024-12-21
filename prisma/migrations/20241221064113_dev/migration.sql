@@ -1,0 +1,7 @@
+-- CreateTable
+CREATE TABLE "imports" (
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "count" INTEGER NOT NULL,
+    "date" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "opId" INTEGER NOT NULL
+);
