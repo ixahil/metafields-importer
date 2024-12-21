@@ -4,7 +4,7 @@ client_id = "a824abed5819efba3f1a6b4c7a4b496d"
 application_url = "https://impacts-informal-electric-prophet.trycloudflare.com"
 embedded = true
 name = "MetaFields Import/Export Bulk"
-handle = "metafields-bulk-import-export
+handle = "metafields-bulk-import-export"
 
 [build]
 automatically_update_urls_on_dev = true
