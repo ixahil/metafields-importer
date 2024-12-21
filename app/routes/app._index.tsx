@@ -327,7 +327,7 @@ export default function Index() {
 
   return (
     <Page>
-      <TitleBar title="Metafields Imports" />
+      <TitleBar title="Metafields Imports"></TitleBar>
       <BlockStack gap="500">
         <Layout sectioned>
           <Layout.Section>
@@ -360,6 +360,12 @@ export default function Index() {
                       </Button>
                     )}
                   </InlineStack>
+                  <div style={{ marginLeft: "auto", padding: "15px 0" }}>
+                    <Badge tone="attention-strong">
+                      Export might take a while to generate, totally depends on
+                      total amount of products
+                    </Badge>
+                  </div>
                 </InlineStack>
                 {file ? (
                   <FileDetails file={file} isLoading={state.importIsLoading} />

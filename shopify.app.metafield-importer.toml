@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "a824abed5819efba3f1a6b4c7a4b496d"
-application_url = "https://metafields-importer.vercel.app/"
+application_url = "https://impacts-informal-electric-prophet.trycloudflare.com"
 embedded = true
 name = "metafields-importer"
 handle = "metafields-importer-1"
@@ -19,9 +19,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://metafields-importer.vercel.app/auth/callback",
-  "https://metafields-importer.vercel.app/auth/shopify/callback",
-  "https://metafields-importer.vercel.app/api/auth/callback"
+  "https://impacts-informal-electric-prophet.trycloudflare.com/auth/callback",
+  "https://impacts-informal-electric-prophet.trycloudflare.com/auth/shopify/callback",
+  "https://impacts-informal-electric-prophet.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
@@ -31,4 +31,3 @@ embedded = false
 dev_store_url = "skates-world-india.myshopify.com"
 automatically_update_urls_on_dev = true
 include_config_on_deploy = true
-

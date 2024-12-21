@@ -2,6 +2,7 @@ import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
 import { useFetcher, useLoaderData, useNavigate } from "@remix-run/react";
 import { TitleBar } from "@shopify/app-bridge-react";
 import {
+  Badge,
   BlockStack,
   Button,
   Card,
@@ -115,7 +116,11 @@ export const Products = (props: Props) => {
         <Layout.Section>
           <Card>
             <BlockStack gap="500">
-              <InlineStack align="end">
+              <InlineStack align="end" gap={"500"}>
+                <Badge tone="attention-strong">
+                  Export might take a while to generate, totally depends on
+                  total amount of products
+                </Badge>
                 {downloadFile ? (
                   <a
                     href={downloadFile}

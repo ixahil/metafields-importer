@@ -1,10 +1,10 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "a824abed5819efba3f1a6b4c7a4b496d"
-application_url = "https://metafields-importer.vercel.app/"
+application_url = "https://metafields-importer.onrender.com"
 embedded = true
 name = "metafields-importer"
-handle = "metafields-importer-1"
+handle = "metafields-all-importer-export"
 
 [webhooks]
 api_version = "2024-10"
@@ -19,9 +19,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://metafields-importer.vercel.app/auth/callback",
-  "https://metafields-importer.vercel.app/auth/shopify/callback",
-  "https://metafields-importer.vercel.app/api/auth/callback"
+  "https://metafields-importer.onrender.com/auth/callback",
+  "https://metafields-importer.onrender.com/auth/shopify/callback",
+  "https://metafields-importer.onrender.com/api/auth/callback"
 ]
 
 [pos]
