@@ -50,6 +50,8 @@ export const fetchAllProducts = async (admin) => {
         id: `'${p.id.split("/").pop()}`,
         handle: p.handle,
         title: p.title,
+        type: p.productType,
+        tags: p.tags.join(", "),
         ...metafields,
       };
     });

@@ -64,6 +64,8 @@ export function DataTableComponent({ products, pageInfo }) {
         "text",
         "text",
       ]}
+      stickyHeader={true}
+      hasZebraStripingOnData
       headings={headings}
       rows={rows}
       pagination={{

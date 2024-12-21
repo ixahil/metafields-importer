@@ -24,8 +24,6 @@ export const convertCsvToJsonl = async (
               .map((row: any) => JSON.stringify({ input: row }))
               .join("\n");
 
-            console.log("Parsed JSONL:");
-            console.log(jsonl);
             resolve(jsonl);
           },
           header: true,
