@@ -31,3 +31,4 @@ embedded = false
 dev_store_url = "skates-world-india.myshopify.com"
 automatically_update_urls_on_dev = true
 include_config_on_deploy = true
+
