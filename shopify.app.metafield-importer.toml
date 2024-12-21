@@ -6,6 +6,11 @@ embedded = true
 name = "metafields-importer"
 handle = "metafields-importer-1"
 
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "skates-world-india.myshopify.com"
+include_config_on_deploy = true
+
 [webhooks]
 api_version = "2024-10"
 
@@ -26,8 +31,3 @@ redirect_urls = [
 
 [pos]
 embedded = false
-
-[build]
-dev_store_url = "skates-world-india.myshopify.com"
-automatically_update_urls_on_dev = true
-include_config_on_deploy = true
