@@ -64,6 +64,7 @@ export function DataTableComponent({ products, pageInfo }) {
         "text",
         "text",
       ]}
+      truncate={true}
       stickyHeader={true}
       hasZebraStripingOnData
       headings={headings}
