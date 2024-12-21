@@ -1,10 +1,15 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "a824abed5819efba3f1a6b4c7a4b496d"
-application_url = "https://metafields-importer.onrender.com"
+application_url = "https://impacts-informal-electric-prophet.trycloudflare.com"
 embedded = true
-name = "Metafields Import/Export Bulk"
-handle = "metafields-all-importer-export"
+name = "MetaFields Import/Export Bulk"
+handle = "metafields-bulk-import-export
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "skates-world-india.myshopify.com"
+include_config_on_deploy = true
 
 [webhooks]
 api_version = "2024-10"
@@ -19,15 +24,10 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://metafields-importer.onrender.com/auth/callback",
-  "https://metafields-importer.onrender.com/auth/shopify/callback",
-  "https://metafields-importer.onrender.com/api/auth/callback"
+  "https://impacts-informal-electric-prophet.trycloudflare.com/auth/callback",
+  "https://impacts-informal-electric-prophet.trycloudflare.com/auth/shopify/callback",
+  "https://impacts-informal-electric-prophet.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
 embedded = false
-
-[build]
-dev_store_url = "skates-world-india.myshopify.com"
-automatically_update_urls_on_dev = true
-include_config_on_deploy = true
