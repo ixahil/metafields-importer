@@ -28,6 +28,8 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
         id
         title
         handle
+        productType
+        tags
         metafields(first: 10) {
           nodes {
             key

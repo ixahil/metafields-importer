@@ -10,6 +10,8 @@ export const fetchAllProducts = async (admin) => {
         id
         title
         handle
+        productType
+        tags
         metafields(first: 10) {
           nodes {
             type

@@ -13,8 +13,10 @@ const sample = [
 ];
 
 const headings = [
-  "id",
+  "ID",
   "Title",
+  "Type",
+  "Tags",
   "Metafield 1",
   "Metafield 2",
   "Metafield 3",
@@ -27,6 +29,8 @@ export function DataTableComponent({ products, pageInfo }) {
     const product = {
       id: edge.node.id.split("/").pop(),
       title: edge.node.title,
+      type: edge.node.productType,
+      tags: edge.node.tags.join(", "),
     };
 
     // Ensure that every product has the expected number of metafields, even if some are missing
