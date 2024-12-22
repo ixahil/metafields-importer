@@ -1,22 +1,23 @@
-import { DataTable, LegacyCard, Page } from "@shopify/polaris";
+import { DataTable } from "@shopify/polaris";
 
-const sample = [
-  ["Emerald Silk Gown", "$875.00", 124689, 140, "$122,500.00"],
-  ["Mauve Cashmere Scarf", "$230.00", 124533, 83, "$19,090.00"],
-  [
-    "Navy Merino Wool Blazer with khaki chinos and yellow belt",
-    "$445.00",
-    124518,
-    32,
-    "$14,240.00",
-  ],
-];
+// const sample = [
+//   ["Emerald Silk Gown", "$875.00", 124689, 140, "$122,500.00"],
+//   ["Mauve Cashmere Scarf", "$230.00", 124533, 83, "$19,090.00"],
+//   [
+//     "Navy Merino Wool Blazer with khaki chinos and yellow belt",
+//     "$445.00",
+//     124518,
+//     32,
+//     "$14,240.00",
+//   ],
+// ];
 
 const headings = [
   "ID",
   "Title",
   "Type",
   "Tags",
+  "Total Inventory",
   "Metafield 1",
   "Metafield 2",
   "Metafield 3",
@@ -31,6 +32,7 @@ export function DataTableComponent({ products, pageInfo }) {
       title: edge.node.title,
       type: edge.node.productType,
       tags: edge.node.tags.join(", "),
+      total_inventory: edge.node.totalInventory,
     };
 
     // Ensure that every product has the expected number of metafields, even if some are missing
@@ -58,6 +60,9 @@ export function DataTableComponent({ products, pageInfo }) {
       columnContentTypes={[
         "numeric",
         "text",
+        "text",
+        "text",
+        "numeric",
         "text",
         "text",
         "text",

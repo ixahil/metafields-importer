@@ -30,6 +30,7 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
         handle
         productType
         tags
+        totalInventory
         metafields(first: 10) {
           nodes {
             key

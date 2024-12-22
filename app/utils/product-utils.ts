@@ -12,6 +12,7 @@ export const fetchAllProducts = async (admin) => {
         handle
         productType
         tags
+        totalInventory
         metafields(first: 10) {
           nodes {
             type
@@ -52,6 +53,7 @@ export const fetchAllProducts = async (admin) => {
         title: p.title,
         type: p.productType,
         tags: p.tags.join(", "),
+        total_inventory: p.totalInventory,
         ...metafields,
       };
     });
