@@ -1,4 +1,5 @@
 import { convertArrayToCSV } from "convert-array-to-csv";
+import Papa from "papaparse";
 
 export const fetchAllProducts = async (admin) => {
   const products = [];
@@ -66,11 +67,22 @@ export const fetchAllProducts = async (admin) => {
 };
 
 export const generateCSV = (products) => {
-  const headers: string[] = Array.from(
-    products.reduce((keySet, product) => {
-      Object.keys(product).forEach((key) => keySet.add(key));
-      return keySet;
-    }, new Set()),
-  );
-  return convertArrayToCSV(products, { header: headers });
+  // const headers: string[] = Array.from(
+  //   products.reduce((keySet, product) => {
+  //     Object.keys(product).forEach((key) => keySet.add(key));
+  //     return keySet;
+  //   }, new Set()),
+  // );
+  const config = {
+    quotes: false, //or array of booleans
+    quoteChar: '"',
+    escapeChar: '"',
+    delimiter: ",",
+    header: true,
+    newline: "\r\n",
+    skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
+  };
+  return Papa.unparse(products, config);
+
+  // return convertArrayToCSV(products, { header: headers });
 };
