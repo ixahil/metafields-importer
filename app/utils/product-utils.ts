@@ -67,6 +67,15 @@ export const fetchAllProducts = async (admin) => {
 };
 
 export const generateCSV = (products) => {
+  const allHeaders = [...new Set(products.flatMap(Object.keys))];
+
+  const processedData = products.map((row) =>
+    allHeaders.reduce((acc, key) => {
+      acc[key] = row[key] || ""; // Fill missing fields with empty strings
+      return acc;
+    }, {}),
+  );
+
   // const headers: string[] = Array.from(
   //   products.reduce((keySet, product) => {
   //     Object.keys(product).forEach((key) => keySet.add(key));
@@ -82,7 +91,7 @@ export const generateCSV = (products) => {
     newline: "\r\n",
     skipEmptyLines: false, //other option is 'greedy', meaning skip delimiters, quotes, and whitespace.
   };
-  return Papa.unparse(products, config);
+  return Papa.unparse(processedData, config);
 
   // return convertArrayToCSV(products, { header: headers });
 };
