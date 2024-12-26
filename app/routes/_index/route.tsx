@@ -1,10 +1,11 @@
 import type { LoaderFunctionArgs } from "@remix-run/node";
 import { redirect } from "@remix-run/node";
-import { Form, useLoaderData } from "@remix-run/react";
+import { Form, Link, useLoaderData } from "@remix-run/react";
 
 import { login } from "../../shopify.server";
 
 import styles from "./styles.module.css";
+import { Image } from "@shopify/polaris";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);
@@ -22,36 +23,44 @@ export default function App() {
   return (
     <div className={styles.index}>
       <div className={styles.content}>
-        <h1 className={styles.heading}>A short heading about [your app]</h1>
+        <h1 className={styles.heading}>
+          <Image source="logo.webp" alt="logo" width={48} height={48} />
+          MetaFilds Bulk Import/Export
+        </h1>
         <p className={styles.text}>
-          A tagline about [your app] that describes your value proposition.
+          Email me If you need to access or need develop any other app -
+          <Link className="email" to={"sahilshaiikh@hotmail.com"}>
+            sahilshaiikh@hotmail.com
+          </Link>
         </p>
-        {showForm && (
-          <Form className={styles.form} method="post" action="/auth/login">
-            <label className={styles.label}>
-              <span>Shop domain</span>
-              <input className={styles.input} type="text" name="shop" />
-              <span>e.g: my-shop-domain.myshopify.com</span>
-            </label>
-            <button className={styles.button} type="submit">
-              Log in
-            </button>
-          </Form>
-        )}
+        <div className={styles.flex}>
+          <Image
+            source="MetaFields-bulk-Importer.png"
+            alt="screencapture"
+            width={500}
+          />
+          <Image
+            source="MetaFields-bulk-Importer-2.png"
+            alt="screencapture"
+            width={500}
+          />
+        </div>
         <ul className={styles.list}>
           <li>
-            <strong>Product feature</strong>. Some detail about your feature and
-            its benefit to your customer.
+            <strong>Export/Import: </strong>Easy Export/Import Metafields from
+            your shopify
           </li>
           <li>
-            <strong>Product feature</strong>. Some detail about your feature and
-            its benefit to your customer.
+            <strong>Format: </strong>Easy format 1 Click Export and Bulk Import
           </li>
           <li>
-            <strong>Product feature</strong>. Some detail about your feature and
-            its benefit to your customer.
+            <strong>Custom App: </strong>Custom App - Request for access
           </li>
         </ul>
+        <footer className={styles.footer}>
+          Developed by{" "}
+          <Link to={"https://isahil.vercel.app/"}>Dev. Sahil </Link>
+        </footer>
       </div>
     </div>
   );
