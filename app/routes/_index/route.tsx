@@ -25,41 +25,54 @@ export default function App() {
       <div className={styles.content}>
         <h1 className={styles.heading}>
           <Image source="logo.webp" alt="logo" width={48} height={48} />
-          MetaFilds Bulk Import/Export
+          MetaFields Bulk Import/Export
         </h1>
+
         <p className={styles.text}>
-          Email me If you need to access or need develop any other app -
-          <Link className="email" to={"sahilshaiikh@hotmail.com"}>
+          Have an idea or need assistance with your next big app? Let’s make it
+          happen!{" "}
+          <Link className="email" to="mailto:sahilshaiikh@hotmail.com">
             sahilshaiikh@hotmail.com
           </Link>
         </p>
+
         <div className={styles.flex}>
           <Image
             source="MetaFields-bulk-Importer.png"
-            alt="screencapture"
-            width={500}
+            alt="Screenshot of MetaFields Bulk Importer"
+            width={600}
           />
           <Image
             source="MetaFields-bulk-Importer-2.png"
-            alt="screencapture"
-            width={500}
+            alt="Screenshot of MetaFields Bulk Importer"
+            width={600}
           />
         </div>
+
         <ul className={styles.list}>
           <li>
-            <strong>Export/Import: </strong>Easy Export/Import Metafields from
-            your shopify
+            <strong>Export/Import: </strong>Effortlessly export and import
+            metafields from your Shopify store.
           </li>
           <li>
-            <strong>Format: </strong>Easy format 1 Click Export and Bulk Import
+            <strong>Format: </strong>One-click export and bulk import for easy
+            formatting.
           </li>
           <li>
-            <strong>Custom App: </strong>Custom App - Request for access
+            <strong>Custom App: </strong>Need a tailored solution? Request
+            access to your custom app.
           </li>
         </ul>
+
         <footer className={styles.footer}>
           Developed by{" "}
-          <Link to={"https://isahil.vercel.app/"}>Dev. Sahil </Link>
+          <Link
+            to="https://isahil.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Dev. Sahil
+          </Link>
         </footer>
       </div>
     </div>

@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "a824abed5819efba3f1a6b4c7a4b496d"
-application_url = "https://his-while-ultimately-wines.trycloudflare.com"
+application_url = "https://baths-victor-provincial-dollar.trycloudflare.com"
 embedded = true
 name = "MetaFields Import/Export Bulk"
 handle = "metafields-bulk-import-export"
@@ -24,9 +24,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://his-while-ultimately-wines.trycloudflare.com/auth/callback",
-  "https://his-while-ultimately-wines.trycloudflare.com/auth/shopify/callback",
-  "https://his-while-ultimately-wines.trycloudflare.com/api/auth/callback"
+  "https://baths-victor-provincial-dollar.trycloudflare.com/auth/callback",
+  "https://baths-victor-provincial-dollar.trycloudflare.com/auth/shopify/callback",
+  "https://baths-victor-provincial-dollar.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
